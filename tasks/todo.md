@@ -6,7 +6,7 @@
   - Acceptance: Define event types, fields, UTC timestamps, nullable values, score validation, other descriptions, versioned envelope and deterministic comparison; reject malformed input and duplicate IDs in a backup.
   - Verify: Run focused Node tests for valid/invalid records, timestamp precision and comparison.
   - Dependencies: None. Owner: this task. Likely files: `event-model.js`, `tests/event-model.test.js`.
-- [ ] **2. Create and persist a first event**
+- [x] **2. Create and persist a first event**
   - Acceptance: A usable page saves a valid event in IndexedDB with UUID and timestamps, confirms committed writes, survives reload, and reports storage failures.
   - Verify: Run focused tests and exercise a real browser reload and simulated failure where practical.
   - Dependencies: 1. Owner: this task. Likely files: `index.html`, `app.js`, `storage.js`, `tests/storage.test.js`.
@@ -16,11 +16,11 @@
 
 ## Phase 2: Complete logging
 
-- [ ] **3. Add quick event forms**
+- [x] **3. Add quick event forms**
   - Acceptance: All nine types are accessible; scores require an integer 1–10, quantities use item units, other requires a description, and event time and notes are editable. Controls are touch-friendly.
   - Verify: Run validation tests and manually create representative types, including invalid inputs.
   - Dependencies: 2. Owner: this task. Likely files: `index.html`, `app.js`, `styles.css`, `tests/event-model.test.js`.
-- [ ] **4. Add history and correction**
+- [x] **4. Add history and correction**
   - Acceptance: Recent events can be edited or soft-deleted; edits retain ID, creation time and unchanged event-time precision; a filter reveals tombstones while normal history hides them.
   - Verify: Run focused edit/delete tests and exercise edit, delete, reload and filter in a browser.
   - Dependencies: 3. Owner: this task. Likely files: `index.html`, `app.js`, `storage.js`, `tests/storage.test.js`.
@@ -30,11 +30,11 @@
 
 ## Phase 3: Data portability
 
-- [ ] **5. Implement atomic backup merge**
+- [x] **5. Implement atomic backup merge**
   - Acceptance: Validate the whole versioned document, merge by ID and later update, reject equal-time content conflicts and invalid documents without partial writes, and retain tombstones.
   - Verify: Run tests using actual IndexedDB transactions for duplicates, old/new edits, deletions, conflicts and rollback.
   - Dependencies: 4. Owner: this task. Likely files: `storage.js`, `event-model.js`, `tests/storage.test.js`, `tests/event-model.test.js`.
-- [ ] **6. Expose backup and restore**
+- [x] **6. Expose backup and restore**
   - Acceptance: Export all events including tombstones as versioned JSON via download and supported file sharing; import reports outcomes/errors and uses atomic merge. Show a backup/data-loss reminder.
   - Verify: Round-trip synthetic events in browser; repeat import and check conflict behavior; test download fallback.
   - Dependencies: 5. Owner: this task. Likely files: `index.html`, `app.js`, `styles.css`, `tests/backup.test.js`.
