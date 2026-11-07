@@ -2,4 +2,6 @@
 
 input[type=range]{padding:0;min-height:44px;accent-color:#24584e;border:0}#score-value{font-weight:700}.event{display:flex;align-items:center;gap:.5rem;padding:.7rem 0}.event-content{flex:1;min-width:0}.event-content p:empty{display:none}.event-actions{display:flex;flex-shrink:0}.event .icon-button{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;background:transparent;color:#47796d}.event .icon-button:hover{background:#e6f0eb}.icon-button svg{width:19px;height:19px;fill:currentColor}
 
-.types button{display:flex;align-items:center;justify-content:center;gap:.5rem}.types button svg{width:20px;height:20px;flex-shrink:0;fill:currentColor}
+.types button{display:flex;align-items:center;justify-content:flex-start;text-align:left;gap:.5rem}.types button svg{width:20px;height:20px;flex-shrink:0;fill:currentColor}
+
+.history-day summary{cursor:pointer;font-weight:700;color:#24584e;padding:.7rem 0;min-height:44px}.history-day+.history-day{border-top:1px solid #dce8e1}.history-day summary:focus-visible{outline:3px solid #df9b49;outline-offset:2px}
