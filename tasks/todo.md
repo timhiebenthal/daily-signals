@@ -56,7 +56,7 @@
   - Acceptance: Offline create/edit/export work, a new shell version eventually activates, and old cache cleanup leaves IndexedDB untouched. Add focused regression coverage where practical.
   - Verify: Browser test online install, offline operations, deployment update, reload and data retention; run relevant automated tests.
   - Dependencies: 8. Owner: this task. Likely files: `service-worker.js`, `tests/pwa.test.js`.
-- [ ] **10. Document and verify delivery**
+- [x] **10. Document and verify delivery**
   - Acceptance: README documents tested commands, Pages `main`/root/HTTPS settings, Android installation, offline use, backup/restore, data-loss risks and DuckDB usage; report access or device limitations.
   - Verify: Run the full test suite and follow local serving and ingestion instructions with synthetic data; inspect the final diff.
   - Dependencies: 7, 9. Owner: this task. Likely files: `README.md`.
