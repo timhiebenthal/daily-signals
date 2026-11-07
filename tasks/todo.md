@@ -38,7 +38,7 @@
   - Acceptance: Export all events including tombstones as versioned JSON via download and supported file sharing; import reports outcomes/errors and uses atomic merge. Show a backup/data-loss reminder.
   - Verify: Round-trip synthetic events in browser; repeat import and check conflict behavior; test download fallback.
   - Dependencies: 5. Owner: this task. Likely files: `index.html`, `app.js`, `styles.css`, `tests/backup.test.js`.
-- [ ] **7. Add DuckDB ingestion example**
+- [x] **7. Add DuckDB ingestion example**
   - Acceptance: Python validates the export version and records, parses aware timestamps, creates a table and merges atomically by ID under the same newer/equal-time rules, retaining deleted records and metadata.
   - Verify: Run Python tests against a temporary DuckDB database for repeat imports, older/newer edits, tombstones, conflicts and rollback.
   - Dependencies: 5. Owner: this task. Likely files: `scripts/ingest_duckdb.py`, `tests/test_ingest_duckdb.py`.
@@ -48,11 +48,11 @@
 
 ## Phase 4: Offline delivery
 
-- [ ] **8. Make the shell installable**
+- [x] **8. Make the shell installable**
   - Acceptance: Manifest, 192/512 icons, relative asset paths and scoped service worker support installation at the project subdirectory; app shell loads offline after successful installation.
   - Verify: Serve under `/daily-signals/`, inspect manifest and service-worker scope, then reload offline.
   - Dependencies: 6. Owner: this task. Likely files: `manifest.webmanifest`, `service-worker.js`, `icons/icon-192.png`, `icons/icon-512.png`, `index.html`.
-- [ ] **9. Verify offline updates and persistence**
+- [x] **9. Verify offline updates and persistence**
   - Acceptance: Offline create/edit/export work, a new shell version eventually activates, and old cache cleanup leaves IndexedDB untouched. Add focused regression coverage where practical.
   - Verify: Browser test online install, offline operations, deployment update, reload and data retention; run relevant automated tests.
   - Dependencies: 8. Owner: this task. Likely files: `service-worker.js`, `tests/pwa.test.js`.
