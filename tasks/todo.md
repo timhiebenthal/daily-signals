@@ -2,7 +2,7 @@
 
 ## Phase 1: Persist a first event
 
-- [ ] **1. Define event and backup contract**
+- [x] **1. Define event and backup contract**
   - Acceptance: Define event types, fields, UTC timestamps, nullable values, score validation, other descriptions, versioned envelope and deterministic comparison; reject malformed input and duplicate IDs in a backup.
   - Verify: Run focused Node tests for valid/invalid records, timestamp precision and comparison.
   - Dependencies: None. Owner: this task. Likely files: `event-model.js`, `tests/event-model.test.js`.
