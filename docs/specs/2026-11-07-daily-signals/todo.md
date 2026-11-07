@@ -12,7 +12,8 @@
   - Dependencies: 1. Owner: this task. Likely files: `index.html`, `app.js`, `storage.js`, `tests/storage.test.js`.
 
 ### Checkpoint
-- [ ] Run current tests and verify creation and reload in a browser.
+- [x] Run current tests and verify creation and reload in a browser.
+  - Verified in a browser; Node and Python tests pass.
 
 ## Phase 2: Complete logging
 
@@ -26,7 +27,8 @@
   - Dependencies: 3. Owner: this task. Likely files: `index.html`, `app.js`, `storage.js`, `tests/storage.test.js`.
 
 ### Checkpoint
-- [ ] Exercise all event types and correction flow with synthetic records; run current tests.
+- [x] Exercise all event types and correction flow with synthetic records; run current tests.
+  - All nine types, editing, deletion and the deleted filter checked in an isolated browser; user confirmed correction on Android.
 
 ## Phase 3: Data portability
 
@@ -44,7 +46,8 @@
   - Dependencies: 5. Owner: this task. Likely files: `scripts/ingest_duckdb.py`, `tests/test_ingest_duckdb.py`.
 
 ### Checkpoint
-- [ ] Export, restore and ingest the same synthetic backup twice; verify no duplicates and matching deletion/conflict behavior.
+- [x] Export, restore and ingest the same synthetic backup twice; verify no duplicates and matching deletion/conflict behavior.
+  - Repeated restores and DuckDB imports retained nine unique records and tombstones; equal-time conflicts rejected. User confirmed import on Android.
 
 ## Phase 4: Offline delivery
 
@@ -62,4 +65,5 @@
   - Dependencies: 7, 9. Owner: this task. Likely files: `README.md`.
 
 ### Final checkpoint
-- [ ] Run all available tests and browser checks; document results and any unverified Android or GitHub Pages steps.
+- [x] Run all available tests and browser checks; document results and any unverified Android or GitHub Pages steps.
+  - Three Node and two Python tests pass; Pages is live and browser offline creation was checked. Android offline use and file sharing remain unverified.
